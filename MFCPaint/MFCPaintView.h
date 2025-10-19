@@ -14,6 +14,7 @@ protected: // 仅从序列化创建
 	CPoint m_stop;
 	CPoint m_curr;
 	BOOL m_status;
+	CString m_strText;
 
 // 特性
 public:
@@ -48,6 +49,10 @@ public:
 	afx_msg void OnLButtonDown(UINT nFlags, CPoint point);
 	afx_msg void OnLButtonUp(UINT nFlags, CPoint point);
 	afx_msg void OnMouseMove(UINT nFlags, CPoint point);
+	afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
+	afx_msg void OnChar(UINT nChar, UINT nRepCnt, UINT nFlags);
+//	afx_msg void OnPaint();
+//	afx_msg void OnPaint();
 };
 
 #ifndef _DEBUG  // MFCPaintView.cpp 中的调试版本

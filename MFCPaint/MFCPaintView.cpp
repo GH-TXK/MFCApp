@@ -28,6 +28,10 @@ BEGIN_MESSAGE_MAP(CMFCPaintView, CView)
 	ON_WM_LBUTTONDOWN()
 	ON_WM_LBUTTONUP()
 	ON_WM_MOUSEMOVE()
+	ON_WM_CREATE()
+	ON_WM_CHAR()
+//	ON_WM_PAINT()
+//ON_WM_PAINT()
 END_MESSAGE_MAP()
 
 // CMFCPaintView 构造/析构
@@ -62,11 +66,14 @@ void CMFCPaintView::OnDraw(CDC* pDC)
 	if (!pDoc)
 		return;
 
+	
+	// TODO: 在此处为本机数据添加绘制代码
+	//CPaintDC pd(this); // device context for painting
+	// TODO: 在此处添加消息处理程序代码
 	CPen pen(PS_SOLID, 100, RGB(0, 255, 0));
 	CPen* pen01 = pDC->SelectObject(&pen);
 	LOGPEN logpen;
 	pen01->GetLogPen(&logpen);
-	TRACE("style = %d, color = %08X, width = %d\n", logpen.lopnStyle,logpen.lopnColor,logpen.lopnWidth);
 	pen.GetLogPen(&logpen);
 	TRACE("style = %d, color = %d, width = %d\n", logpen.lopnStyle, logpen.lopnColor, logpen.lopnWidth);
 	if (m_status)
@@ -80,7 +87,6 @@ void CMFCPaintView::OnDraw(CDC* pDC)
 		pDC->LineTo(m_stop);
 	}
 	pDC->SelectObject(pen01);
-	// TODO: 在此处为本机数据添加绘制代码
 }
 
 void CMFCPaintView::OnRButtonUp(UINT /* nFlags */, CPoint point)
@@ -149,3 +155,35 @@ void CMFCPaintView::OnMouseMove(UINT nFlags, CPoint point)
 	}
 	CView::OnMouseMove(nFlags, point);
 }
+
+int CMFCPaintView::OnCreate(LPCREATESTRUCT lpCreateStruct)
+{
+	if (CView::OnCreate(lpCreateStruct) == -1)
+		return -1;
+	CClientDC dc(this);
+	TEXTMETRICW tm;
+	dc.GetTextMetrics(&tm);
+	CreateSolidCaret(2, tm.tmHeight);
+	ShowCaret();
+	// TODO:  在此添加您专用的创建代码
+
+	return 0;
+}
+
+void CMFCPaintView::OnChar(UINT nChar, UINT nRepCnt, UINT nFlags)
+{
+	// TODO: 在此添加消息处理程序代码和/或调用默认值
+	TRACE("OnChar: nChar = %c, nRepCnt = %d, nFlags = %d\n", nChar, nRepCnt, nFlags);
+	CClientDC dc(this);
+	m_strText += (TCHAR)nChar;
+	InvalidateRect(NULL);
+	CView::OnChar(nChar, nRepCnt, nFlags);
+}
+
+
+//void CMFCPaintView::OnPaint()
+//{
+//	CPaintDC dc(this); // device context for painting
+	// TODO: 在此处添加消息处理程序代码
+	// 不为绘图消息调用 CView::OnPaint()
+//}
