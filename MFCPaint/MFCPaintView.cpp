@@ -87,6 +87,7 @@ void CMFCPaintView::OnDraw(CDC* pDC)
 		pDC->LineTo(m_stop);
 	}
 	pDC->SelectObject(pen01);
+	pDC->TextOutW(0, 0, m_strText);
 }
 
 void CMFCPaintView::OnRButtonUp(UINT /* nFlags */, CPoint point)
