@@ -179,11 +179,3 @@ void CMFCPaintView::OnChar(UINT nChar, UINT nRepCnt, UINT nFlags)
 	InvalidateRect(NULL);
 	CView::OnChar(nChar, nRepCnt, nFlags);
 }
-
-
-//void CMFCPaintView::OnPaint()
-//{
-//	CPaintDC dc(this); // device context for painting
-	// TODO: 在此处添加消息处理程序代码
-	// 不为绘图消息调用 CView::OnPaint()
-//}
