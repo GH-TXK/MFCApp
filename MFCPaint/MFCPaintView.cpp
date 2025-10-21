@@ -70,7 +70,7 @@ void CMFCPaintView::OnDraw(CDC* pDC)
 	// TODO: 在此处为本机数据添加绘制代码
 	//CPaintDC pd(this); // device context for painting
 	// TODO: 在此处添加消息处理程序代码
-	CPen pen(PS_SOLID, 100, RGB(0, 255, 0));
+	CPen pen(PS_SOLID, 3, RGB(0, 0, 0));
 	CPen* pen01 = pDC->SelectObject(&pen);
 	LOGPEN logpen;
 	pen01->GetLogPen(&logpen);
