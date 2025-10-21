@@ -87,7 +87,31 @@ void CMFCPaintView::OnDraw(CDC* pDC)
 		pDC->LineTo(m_stop);
 	}
 	pDC->SelectObject(pen01);
-	pDC->TextOutW(0, 0, m_strText);
+	//pDC->TextOutW(0, 0, m_strText);
+	CString sub = _T("");
+	int y = 0;
+	for(int i = 0 ; i < m_strText.GetLength(); i++)
+	{
+		if((m_strText.GetAt(i)) == '\n' || (m_strText.GetAt(i)) == '\r')
+		{
+			pDC->TextOut(0, y, sub);
+			CSize size = pDC->GetTextExtent(sub);
+			sub.Empty();
+			y += 20;
+			continue;
+		}
+		sub += m_strText.GetAt(i);
+	}
+	if(sub.IsEmpty() == false)
+	{
+		pDC->TextOut(0, y, sub);
+	} 
+
+	CPoint pt;
+	CSize sz = pDC->GetTextExtent(sub);
+	pt.y = y;
+	pt.x = sz.cx;
+	SetCaretPos(pt);
 }
 
 void CMFCPaintView::OnRButtonUp(UINT /* nFlags */, CPoint point)
