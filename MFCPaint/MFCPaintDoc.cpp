@@ -23,6 +23,7 @@
 IMPLEMENT_DYNCREATE(CMFCPaintDoc, CDocument)
 
 BEGIN_MESSAGE_MAP(CMFCPaintDoc, CDocument)
+	ON_COMMAND(ID_Draw_Rect, &CMFCPaintDoc::OnDrawRect)
 END_MESSAGE_MAP()
 
 
@@ -136,3 +137,9 @@ void CMFCPaintDoc::Dump(CDumpContext& dc) const
 
 
 // CMFCPaintDoc 命令
+
+void CMFCPaintDoc::OnDrawRect()
+{
+	// TODO: 在此添加命令处理程序代码
+	TRACE("Draw Rect Command Invoked\n");
+}

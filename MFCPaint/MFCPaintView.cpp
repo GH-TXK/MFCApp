@@ -32,6 +32,7 @@ BEGIN_MESSAGE_MAP(CMFCPaintView, CView)
 	ON_WM_CHAR()
 //	ON_WM_PAINT()
 //ON_WM_PAINT()
+ON_COMMAND(ID_Draw_line, &CMFCPaintView::OnDrawline)
 END_MESSAGE_MAP()
 
 // CMFCPaintView 构造/析构
@@ -203,4 +204,9 @@ void CMFCPaintView::OnChar(UINT nChar, UINT nRepCnt, UINT nFlags)
 	m_strText += (TCHAR)nChar;
 	InvalidateRect(NULL);
 	CView::OnChar(nChar, nRepCnt, nFlags);
+}
+void CMFCPaintView::OnDrawline()
+{
+	// TODO: 在此添加命令处理程序代码
+	TRACE("OnDrawline called\n");
 }
