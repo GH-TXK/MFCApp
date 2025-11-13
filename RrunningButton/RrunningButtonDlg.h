@@ -2,6 +2,7 @@
 // RrunningButtonDlg.h: 头文件
 //
 #include "MyCButton.h"
+#include "PROP01.h"
 #pragma once
 
 
@@ -35,4 +36,5 @@ public:
 	afx_msg void OnBnClickedButton2();
 	MyCButton m_Button_left;
 	MyCButton m_Button_right;
+	afx_msg void OnBnClickedButton3();
 };
