@@ -36,6 +36,9 @@
     <ClInclude Include="MyCButton.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="PROP01.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="RrunningButton.cpp">
@@ -48,6 +51,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="MyCButton.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="PROP01.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
