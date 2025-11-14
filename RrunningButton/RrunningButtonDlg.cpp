@@ -109,11 +109,3 @@ void CRrunningButtonDlg::OnBnClickedButton3()
 	page01->Create(IDD_PROP_01, this);
 	page01->ShowWindow(SW_SHOW);
 }
-
-void CRrunningButtonDlg::OnBnClickedButton3()
-{
-	// TODO: 在此添加控件通知处理程序代码
-	PROP_01 * prop = new PROP_01;
-	prop->Create(IDD_PROP_01, this);
-	prop->ShowWindow(SW_SHOW);
-}
