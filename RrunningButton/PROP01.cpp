@@ -25,7 +25,7 @@ PROP_01::~PROP_01()
 void PROP_01::DoDataExchange(CDataExchange* pDX)
 {
 	CPropertyPage::DoDataExchange(pDX);
-	DDX_Radio(pDX, IDC_RADIO1, m_lang);
+	//DDX_Radio(pDX, IDC_RADIO1, m_lang);
 }
 
 
@@ -40,7 +40,8 @@ BOOL PROP_01::OnInitDialog()
 	CPropertyPage::OnInitDialog();
 
 	// TODO:  在此添加额外的初始化
-
+	((CListBox *)GetDlgItem(IDC_LIST2))->AddString(_T("简体中文"));
+	((CListBox *)GetDlgItem(IDC_LIST2))->AddString(_T("English"));
 	return TRUE;  // return TRUE unless you set the focus to a control
 	// 异常: OCX 属性页应返回 FALSE
 }

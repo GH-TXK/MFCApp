@@ -34,6 +34,7 @@ BEGIN_MESSAGE_MAP(CRrunningButtonDlg, CDialogEx)
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
 	ON_BN_CLICKED(IDC_BUTTON2, &CRrunningButtonDlg::OnBnClickedButton2)
+	ON_BN_CLICKED(IDC_BUTTON3, &CRrunningButtonDlg::OnBnClickedButton3)
 END_MESSAGE_MAP()
 
 
@@ -98,4 +99,12 @@ void CRrunningButtonDlg::OnBnClickedButton2()
 {
 	// TODO: 在此添加控件通知处理程序代码
 	TRACE("You clicked the exit button!\n");
+}
+
+void CRrunningButtonDlg::OnBnClickedButton3()
+{
+	// TODO: 在此添加控件通知处理程序代码
+	PROP_01 * prop = new PROP_01;
+	prop->Create(IDD_PROP_01, this);
+	prop->ShowWindow(SW_SHOW);
 }
