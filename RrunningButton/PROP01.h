@@ -24,4 +24,5 @@ protected:
 public:
 	BOOL m_lang;
 	virtual BOOL OnInitDialog();
+	BOOL m_java;
 };

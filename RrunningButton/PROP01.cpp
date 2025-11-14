@@ -13,9 +13,10 @@ IMPLEMENT_DYNAMIC(PROP_01, CPropertyPage)
 
 PROP_01::PROP_01()
 	: CPropertyPage(IDD_PROP_01)
-	, m_lang(FALSE)
-{
 
+{
+	m_lang=TRUE;
+	m_java=FALSE;
 }
 
 PROP_01::~PROP_01()
@@ -26,6 +27,10 @@ void PROP_01::DoDataExchange(CDataExchange* pDX)
 {
 	CPropertyPage::DoDataExchange(pDX);
 	//DDX_Radio(pDX, IDC_RADIO1, m_lang);
+	//DDX_Radio(pDX, IDC_RADIO2, m_java);
+	//DDX_Control(pDX, IDC_RADIO1, m_lang);
+	DDX_Check(pDX, IDC_RADIO1, m_lang);
+
 }
 
 
