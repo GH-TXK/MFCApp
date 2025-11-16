@@ -32,6 +32,7 @@ void PROP_01::DoDataExchange(CDataExchange* pDX)
 	//DDX_Control(pDX, IDC_RADIO1, m_lang);
 	DDX_Radio(pDX, IDC_RADIO1, m_lang);
 
+	DDX_Control(pDX, IDC_RADIO1, wo);
 	DDX_Control(pDX, IDC_LIST2, m_listbox);
 	DDX_LBString(pDX, IDC_LIST2, m_listbox_string);
 }
