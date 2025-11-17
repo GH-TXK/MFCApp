@@ -187,6 +187,8 @@
     <ClInclude Include="MyCButton.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="PROP01.h" />
+    <ClInclude Include="PROP03.h" />
+    <ClInclude Include="PROPP02.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="RrunningButton.h" />
     <ClInclude Include="RrunningButtonDlg.h" />
@@ -201,6 +203,8 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="PROP01.cpp" />
+    <ClCompile Include="PROP03.cpp" />
+    <ClCompile Include="PROPP02.cpp" />
     <ClCompile Include="RrunningButton.cpp" />
     <ClCompile Include="RrunningButtonDlg.cpp" />
   </ItemGroup>

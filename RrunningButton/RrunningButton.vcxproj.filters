@@ -39,6 +39,12 @@
     <ClInclude Include="PROP01.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="PROPP02.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="PROP03.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="RrunningButton.cpp">
@@ -54,6 +60,12 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="PROP01.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="PROPP02.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="PROP03.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
