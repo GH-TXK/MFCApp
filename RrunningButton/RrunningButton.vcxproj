@@ -185,6 +185,7 @@
   <ItemGroup>
     <ClInclude Include="framework.h" />
     <ClInclude Include="MyCButton.h" />
+    <ClInclude Include="MyPropertySheet.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="PROP01.h" />
     <ClInclude Include="PROP03.h" />
@@ -196,6 +197,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MyCButton.cpp" />
+    <ClCompile Include="MyPropertySheet.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

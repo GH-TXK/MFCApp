@@ -45,6 +45,9 @@
     <ClInclude Include="PROP03.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="MyPropertySheet.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="RrunningButton.cpp">
@@ -66,6 +69,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="PROP03.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MyPropertySheet.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

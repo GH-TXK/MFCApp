@@ -22,7 +22,11 @@ protected:
 
 	DECLARE_MESSAGE_MAP()
 public:
-	BOOL m_lang;
+	int m_lang;
 	virtual BOOL OnInitDialog();
-	BOOL m_java;
+	//BOOL m_java;
+	virtual BOOL OnSetActive();
+	CListBox m_listbox;
+	virtual LRESULT OnWizardNext();
+	CString m_listbox_string;
 };

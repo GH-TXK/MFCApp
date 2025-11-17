@@ -5,7 +5,6 @@
 #define IDD_RRUNNINGBUTTON_DIALOG       102
 #define IDD_PROP_01                     103
 #define IDD_PROPP_02                    104
-#define IDD_PROPPAGE_SMALL              105
 #define IDD_PROP_03                     105
 #define IDR_MAINFRAME                   128
 #define IDC_BUTTON1                     1000

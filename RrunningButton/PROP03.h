@@ -21,4 +21,9 @@ protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV 支持
 
 	DECLARE_MESSAGE_MAP()
+public:
+	virtual BOOL OnSetActive();
+	afx_msg void OnCbnSelchangeCombo1();
+	CString m_combo1;
+	virtual BOOL OnWizardFinish();
 };

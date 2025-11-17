@@ -11,6 +11,7 @@
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
+#include "MyPropertySheet.h"
 
 
 // CRrunningButtonDlg 对话框
@@ -105,7 +106,35 @@ void CRrunningButtonDlg::OnBnClickedButton2()
 void CRrunningButtonDlg::OnBnClickedButton3()
 {
 	// TODO: 在此添加控件通知处理程序代码
-	PROP_01* page01 = new PROP_01;
-	page01->Create(IDD_PROP_01, this);
-	page01->ShowWindow(SW_SHOW);
+	//PROP_01* page01 = new PROP_01;
+	//page01->Create(IDD_PROP_01, this);
+	//page01->ShowWindow(SW_SHOW);
+	CMyPropertySheet propSheet(_T("Settings"), this);
+	propSheet.SetWizardMode();
+	if (ID_WIZFINISH == propSheet.DoModal())
+	{
+		TRACE("Wizard finished successfully.\n");
+		CString msg = _T("收集结果：\n");
+		msg += _T("语言选择：");
+		switch (propSheet.prop1.m_lang)
+		{
+		default:-1;
+			break;
+		case 0:
+			msg += _T("简体中文\n");
+			break;
+		case 1:
+			msg += _T("English\n");
+			break;
+		case 2:
+			msg += _T("日本語\n");
+			break;
+		}
+		msg += propSheet.prop1.m_listbox_string + _T("\n");
+		msg += _T("选项：\n");
+		msg += propSheet.prop3.m_combo1 + _T("\n");
+		MessageBox(msg, _T("结果"), MB_OK | MB_ICONINFORMATION);
+	};
+
+
 }
